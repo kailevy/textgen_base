@@ -1,0 +1,6 @@
+[submodule "text-generator"]
+	path = text-generator
+	url = https://github.com/kailevy/text-generator
+[submodule "tf_textgen"]
+	path = tf_textgen
+	url = https://github.com/kailevy/tf_textgen
