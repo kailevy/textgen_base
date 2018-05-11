@@ -45,12 +45,12 @@ We attempted to manually implement a categorical cross-entropy loss function on 
 
 We made a few other modifications to the code that we adopted from the blog post about text generations. Notably, we tweaked the text generation method in two ways: first, so that we could have more control, and tell the predictor which characters to start a sequence with, so that we could compare generated text more easily; and second, we implemented a “random” mode for the text generation, which chose the next character in the prediction sequence by rolling a random number generator and selecting the one appropriate to the probabilities, as opposed to simply choosing the next character with the highest probability. 
 
-We developed a few additional helper functions that allowed us to run experiments more carefully in jupyter notebooks, but these two additions (as well as the loss evaluation above) were the most interesting features that we added
+We developed a few additional helper functions that allowed us to run experiments more carefully in jupyter notebooks, but these two additions (as well as the loss evaluation above) were the most interesting features that we added. All of these modifications are in the `text-generator` directory.
 
 
 ## Tensorflow implementation
 
-We also tried to recreate the text generator with TensorFlow following the format of Stanford CS224’s framework(Appendix) we’ve been using in the problem sets. It encapsulates TensorFlow computational graphs and works as a scaffold for model implementation. However we didn’t manage to make the model function as expected in the end. The main purpose of the re-implementation is for better understanding the text generating model. We achieved a good amount of the learning goal here during the process of rewriting the model as well as debugging throughout the way. As the model was not functioning as expected in the end and we decided to pivot to fine-tuning the existed model to achieve optimal performance, we decided to set the implementation as stretch goal. 
+We also tried to recreate the text generator with TensorFlow following the format of Stanford CS224’s framework(Appendix) we’ve been using in the problem sets. It encapsulates TensorFlow computational graphs and works as a scaffold for model implementation. However we didn’t manage to make the model function as expected in the end. The main purpose of the re-implementation is for better understanding the text generating model. We achieved a good amount of the learning goal here during the process of rewriting the model as well as debugging throughout the way. As the model was not functioning as expected in the end and we decided to pivot to fine-tuning the existed model to achieve optimal performance, we decided to set the implementation as stretch goal. The files involved are in the `tf_textgen` directory.
 
 # Experiments
 
