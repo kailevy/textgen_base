@@ -73,13 +73,61 @@ Below is a table which outlines the model parameters and the associated losses, 
 | 2          | 700         | 0       | 7                 | 1.157424722 | 1.580256926 | 1.518067578 | Here is a strange that she shall be so fairly.\n\nBRUTUS:\nI do not see the marketh of the state,\nAnd th', | "HENRY VIII:\nI have no more mad-certaintral grace\nWhere he was liin from him, and take't with shelt ou",   |
 | 1          | 500         | 0       | 9                 | 1.269425737 | 1.602660915 | 1.540348268 | "Here is the storm of the state of the state\nThat should have stol'n his state and strange state\nAnd s",  | "H:\nHow say you, will you you break the open to a slave?\n'Tis true: which shall be hedged of men!\nShal",  |
 | 3          | 500         | 0       | 7                 | 1.211703133 | 1.56380765  | 1.5112775   | Here is a prince and the state of the state\nAnd there were so much to the common prince and the state',    | HERSITES:\nHe was whom I think they would lie.\n\nBRUTUS:\nAdventurally, aleward, from title honour\nThat ', |
-| 2          | 500         | 0.15    | 10                | 1.283776842 | 1.549497075 | 1.482365988 | Here comes the last that should be so with me?\n\nBEATRICE:\nI will not speak with me; I will not speak ',  | "Hath made me banished?\n\nOCTAVIUS:\nAn thou shalt lie, which we were slow,\nThere's near in thy pursuit.", |
+| 2          | 500         | 0.15    | 10                | 1.283776842 | *1.549497075* | *1.482365988* | Here comes the last that should be so with me?\n\nBEATRICE:\nI will not speak with me; I will not speak ',  | "Hath made me banished?\n\nOCTAVIUS:\nAn thou shalt lie, which we were slow,\nThere's near in thy pursuit.", |
 | 2          | 500         | 0.3     | 13                | 1.328427298 | 1.554716093 | 1.4895319   | He is a dream of many a man as the sea,\nThat thou art the sea of the sea, and the sea of the sea,\nAnd']   | "HARNERICK:\nWhat wouldst thou? why set thou?\n\nPost:\nIt is true, what's the proud man? further! passion"  |
 
 
-We were somewhat surprised to see that most of the models terminated very early (before 10 epochs), and they all terminated before 15. We deduced that they generally terminated because the validation loss would go up, meaning that the models were beginning to overfit. This image of training loss and validation over time demonstrates the overfitting trend that started to creep into our models. However, we still felt that the models that were trained for longer would qualitatively produce better passages than those that had terminated early because of overfitting.
+We were somewhat surprised to see that most of the models terminated very early (before 10 epochs), and they all terminated before 15. We deduced that they generally terminated because the validation loss would go up, meaning that the models were beginning to overfit. This image of training loss and validation over time demonstrates the overfitting trend that started to creep into our models, over 30 epochs.
 
-// INSERT IMAGE//
+
+![Shakespeare 30 epoch fit](./images/shakespeare_fit.png)
+
+However, we still felt that the models that were trained for longer would qualitatively produce better passages than those that had terminated early because of overfitting. For example, one of the models that terminated early with a test loss of about 1.51 generated the phrase: 
+```
+Here is the storm of the state of the state 
+That should have stol'n his state and strange state 
+And
+```
+. This doesn't really make sense, and it overuses the word "state" a ton. By contrast, after training the model for 50 epochs, it achieved a validation loss of 1.64, which is slightly higher, but had a better generated phrase: 
+
+```
+Here is a man that had a heart
+To take a brothel of the world.
+
+CORNWALL:
+What say you?
+
+CASSIUS:
+I 
+```
+
+This is possibly because the lowest entropy of the character by character passages is around 1.5, and these slight differences don't mean that much. But rather, the longer that the model trains, the more natural it will sound. An additional passage form the 50 epoch, with random on:
+```
+HELENA:
+That I do famn us for my love: I would proceed.
+
+KING RICHARD II:
+And, mischief, good I longe. To her I do not,
+Yea, Dolpoter of Secentaoner, 
+```
+
+The passages don't make a lot of sense, but they at least sound like Shakespeare.
+
+Just for fun, we trained the "best" model parameters for 50 epochs on a lyrics database, which contained the top 100 billboard songs from 1964-2015.  It's loss looks similar, where the validation hits its minimum before 10, in the image below:
+
+![lyrics fit, 50 epochs](./images/lyrics_fit.png)
+
+And it produced some fun, generally nonsensical passages (note: there was no capitilization or punctuation in this dataset)
+
+```
+its summer night im gonna show you how it feels to be loved be loved by you yes it is so care always
+```
+
+```
+in the back of my mind i cant get you off my mind i cant get you off my mind i cant get you off my m
+```
+^That one could be achorus...
+
 
 # Reflection
 
