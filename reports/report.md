@@ -126,7 +126,7 @@ its summer night im gonna show you how it feels to be loved be loved by you yes 
 ```
 in the back of my mind i cant get you off my mind i cant get you off my mind i cant get you off my m
 ```
-^That one could be achorus...
+^That one could be a chorus...
 
 
 # Reflection
