@@ -124,10 +124,15 @@ its summer night im gonna show you how it feels to be loved be loved by you yes 
 ```
 
 ```
-in the back of my mind i cant get you off my mind i cant get you off my mind i cant get you off my m
+in the back of my mind i cant get you off my mind i cant get you off my mind i cant get you off my mind
 ```
 ^That one could be a chorus...
 
+And we let it go for a 500 character sequence, which had many more spelling errors...
+
+```
+ite you cant resist baby no baby i think youre evrything you say its over we never let it be the rhythm of my life who could i be because the deupless cause youve given me nothing but my heart cant tell you breakded how you the way that i layd for so long it was all that i want and i walk aloneim gonna love you sooner or later youll stay the sun yeah uhh uhh ahh ahh ahh aint it a sweet panty city whatditten whatcha gonna do when she wants you to boarda der dem clab is north love patches act like
+```
 
 # Reflection
 
