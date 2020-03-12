@@ -56,7 +56,7 @@ lmdb==0.86
 Markdown==2.6.11
 MarkupSafe==1.0
 matplotlib==2.1.2
-mistune==0.8
+mistune==0.8.1
 mock==2.0.0
 mpld3==0.2
 nbconvert==5.3.1
