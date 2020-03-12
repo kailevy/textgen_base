@@ -87,7 +87,7 @@ pycparser==2.18
 pycrypto==2.6.1
 Pygments==2.2.0
 pymongo==2.8
-pyOpenSSL==17.3.0
+pyOpenSSL==17.5.0
 pyparsing==2.2.0
 pyserial==2.6
 python-dateutil==2.6.1
