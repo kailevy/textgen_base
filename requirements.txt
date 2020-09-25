@@ -112,7 +112,7 @@ statsmodels==0.6.1
 subprocess32==3.2.7
 tensorboard==1.7.0
 tensorflow==1.15.2
-tensorflow-gpu==1.2.0
+tensorflow-gpu==1.15.4
 tensorflow-tensorboard==1.5.1
 termcolor==1.1.0
 terminado==0.6
