@@ -19,7 +19,7 @@ chardet==2.1.1
 colorama==0.2.5
 configobj==4.7.2
 configparser==3.5.0
-cryptography==2.1.2
+cryptography==3.2
 cycler==0.10.0
 Cython==0.22.1
 decorator==4.2.1
